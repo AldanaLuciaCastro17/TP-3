@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$color--primario: rgb(19, 19, 64);
+$color--secundario: white;
+
+
+
+// MIXINS
+
+@mixin flex_display($direction: row, $aligncontent: left, $alignitems: center) {
+    display: flex;
+    justify-content: $aligncontent;
+    flex-direction: $direction;
+    align-items: $alignitems;
+} 
+
+@mixin btn_format {
+    background-color: $color--primario;
+    color: $color--secundario;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid $color--primario;
+    
+}
+
+
+// ANIDACION
+.nav__bar{
+
+    background-color: $color--primario;
+    @include flex_display($direction: row, $alignitems: center);
+    padding: 10px;
+    
+    h1{
+        margin: 0 10px;
+        color: $color--secundario;
+    }
+
+    .nav__bar--links{
+        color: $color--secundario;
+        padding: 0 5px;
+        text-decoration: none;
+        font-size: small;
+        font-weight: 100;
+    }
+
+    .nav__bar--links:hover{
+        color: grey;
+    }
+
+
+}
+.search__jobs{
+    @include flex_display($direction: row, $aligncontent: center, $alignitems: center );
+    margin: 10px;
+    padding: 10px;
+
+    .search__job--select{
+        padding: 5px 40px;
+        outline: none;
+        border-radius: 10px;
+        border: 1px solid $color--primario;
+        color: $color--primario;
+    }
+
+    .btn-search{
+        @include btn_format();
+    }
+
+    .btn-search:hover{
+        background-color: rgb(40, 40, 93);
+    }
+
+    .btn-clear{
+        @include btn_format();
+    }
+    .btn-clear:hover{
+        background-color: rgb(40, 40, 93);
+    }
+
+    @media (max-width: 729px){
+        display: flex;
+        flex-direction: column;;
+        width: 60%;
+        margin: 1% auto;
+        padding: 10px;
+
+    }
+
+}
+
+
+.loading_contianer{
+    @include flex_display($direction: row, $aligncontent: center, $alignitems: center );
+   
+
+    .loading__container--img{
+        width: 10%;
+        display: none;
+    }
+}
+
+
+#form__container{
+    @include flex_display($direction: column, $aligncontent: center, $alignitems: left );
+    margin: 10px auto;
+    width: 80%;
+    
+
+    label{
+        font-weight: bold;
+        margin: 10px 0px;
+    }
+
+    .form__container--input{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 30px;
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    .btn-submit{
+        @include btn_format();
+        width: 10%;
+    }
+    
+}
+
+.container__footer{
+    background-color: $color--primario;
+    color: $color--secundario;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+
+}
+
+.container__cards{
+    flex-wrap: wrap;
+    @include flex_display($direction: row, $aligncontent: center, $alignitems: center);
+
+    .container__cards--cards{
+        @include flex_display($direction: column, $aligncontent: center, $alignitems: center);
+        max-width: 600px;
+        min-width: 330px;
+        border: 1px solid rgb(19, 19, 64);
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        width: 25%;
+        text-align: center;
+    }
+
+    h2{
+        color: $color--primario;
+        margin: 2%;
+    }
+
+    p{
+        margin: 2%;
+        margin-top: 5%;
+    }
+
+    .span__card{
+        width: 100%;
+        flex-wrap: wrap;
+        @include flex_display ($direction: row, $aligncontent: center, $alignitems: center);
+    }
+    .span__card--s{
+        margin: 10px;
+        padding: 10px 20px;
+        border: 1px solid rgb(19, 19, 64);
+        border-radius: 8px;
+        color: $color--primario;
+    }
+
+    .btn-details{
+        @include btn_format()
+    }
+    .btn-details:hover{
+        background-color: rgb(40, 40, 93);
+    }
+
+}
+
+.container__cards--details{
+    flex-wrap: wrap;
+    @include flex_display($direction: row, $aligncontent: center, $alignitems: center);
+    border: 1px solid rgb(19, 19, 64);
+    border-radius: 10px;
+    margin: 0.7em;
+    width: 70%;
+    padding: 10px 0px;
+    text-align: center;
+
+    .span__carddetail{
+        width: 100%;
+        flex-wrap: wrap;
+        @include flex_display ($direction: row, $aligncontent: center, $alignitems: center);
+    }
+    .span__card--p{
+        margin: 10px;
+        padding: 10px 20px;
+        border: 1px solid rgb(19, 19, 64);
+        border-radius: 8px;
+        color: $color--primario;
+    }
+    .div__btn--edit{
+       @include btn_format()
+    }
+    .div__btn--delet{
+        @include btn_format()
+    }
+    .div__btn--edit:hover{
+        background-color: rgb(40, 40, 93);
+    }
+
+    .div__btn--delet:hover{
+        background-color: rgb(40, 40, 93);
+    }
+
+    
+}
+.alertDelete{
+    @include flex_display($direction: row, $aligncontent: center, $alignitems: center );
+    background-color: rgb(245, 193, 193);
+    width: 100%;
+    padding: 10px;
+
+
+    .btn-cancel{
+        @include btn_format();
+        margin: 10px
+    }
+    .btn-delete{
+        @include btn_format();
+    }
+
+}

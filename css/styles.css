@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav__bar {
+  background-color: rgb(19, 19, 64);
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.nav__bar h1 {
+  margin: 0 10px;
+  color: white;
+}
+.nav__bar .nav__bar--links {
+  color: white;
+  padding: 0 5px;
+  text-decoration: none;
+  font-size: small;
+  font-weight: 100;
+}
+.nav__bar .nav__bar--links:hover {
+  color: grey;
+}
+
+.search__jobs {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+.search__jobs .search__job--select {
+  padding: 5px 40px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+  color: rgb(19, 19, 64);
+}
+.search__jobs .btn-search {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+}
+.search__jobs .btn-search:hover {
+  background-color: rgb(40, 40, 93);
+}
+.search__jobs .btn-clear {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+}
+.search__jobs .btn-clear:hover {
+  background-color: rgb(40, 40, 93);
+}
+
+.loading_contianer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.loading_contianer .loading__container--img {
+  width: 10%;
+  display: none;
+}
+
+#form__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  margin: 10px auto;
+  width: 80%;
+}
+#form__container label {
+  font-weight: bold;
+  margin: 10px 0px;
+}
+#form__container .form__container--input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 30px;
+  align-items: center;
+  margin: 10px 0px;
+}
+#form__container .btn-submit {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+  width: 10%;
+}
+
+.container__footer {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.container__cards {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.container__cards .container__cards--cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  min-width: 330px;
+  border: 1px solid rgb(19, 19, 64);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 25%;
+  text-align: center;
+}
+.container__cards h2 {
+  color: rgb(19, 19, 64);
+  margin: 2%;
+}
+.container__cards p {
+  margin: 2%;
+  margin-top: 5%;
+}
+.container__cards .span__card {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.container__cards .span__card--s {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid rgb(19, 19, 64);
+  border-radius: 8px;
+  color: rgb(19, 19, 64);
+}
+.container__cards .btn-details {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+}
+.container__cards .btn-details:hover {
+  background-color: rgb(40, 40, 93);
+}
+
+.container__cards--details {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid rgb(19, 19, 64);
+  border-radius: 10px;
+  margin: 0.7em;
+  width: 70%;
+  padding: 10px 0px;
+  text-align: center;
+}
+.container__cards--details .span__carddetail {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.container__cards--details .span__card--p {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid rgb(19, 19, 64);
+  border-radius: 8px;
+  color: rgb(19, 19, 64);
+}
+.container__cards--details .div__btn--edit {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+}
+.container__cards--details .div__btn--delet {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+}
+.container__cards--details .div__btn--edit:hover {
+  background-color: rgb(40, 40, 93);
+}
+.container__cards--details .div__btn--delet:hover {
+  background-color: rgb(40, 40, 93);
+}
+
+.alertDelete {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(245, 193, 193);
+  width: 100%;
+  padding: 10px;
+}
+.alertDelete .btn-cancel {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+  margin: 10px;
+}
+.alertDelete .btn-delete {
+  background-color: rgb(19, 19, 64);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(19, 19, 64);
+}
+
+/*# sourceMappingURL=styles.css.map */
